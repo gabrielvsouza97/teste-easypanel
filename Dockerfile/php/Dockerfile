@@ -12,7 +12,7 @@ RUN apk add --no-cache \
     unzip
 
 # Compila e instala as extensões do PHP
-RUN docker-php-ext-install intl mbstring pdo pdo_mysql
+RUN docker-php-ext-install intl mbstring pdo pdo_mysql mysqli
 
 # Baixa o Composer oficial
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
